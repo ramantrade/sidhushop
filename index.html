@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>SIDHU Originals</title>
+<title>SIDHU Originals™</title>
 
 <style>
 *{
@@ -20,19 +19,19 @@ color:#fff;
 }
 
 header{
-text-align:center;
 padding:40px 20px;
+text-align:center;
 border-bottom:1px solid #222;
 }
 
 header h1{
 font-size:3rem;
-letter-spacing:3px;
+letter-spacing:4px;
 }
 
 header p{
-margin-top:10px;
 color:#aaa;
+margin-top:10px;
 }
 
 .container{
@@ -51,7 +50,7 @@ min-width:300px;
 
 .main-image{
 width:100%;
-border-radius:10px;
+border-radius:12px;
 border:1px solid #222;
 }
 
@@ -59,6 +58,7 @@ border:1px solid #222;
 display:flex;
 gap:10px;
 margin-top:15px;
+flex-wrap:wrap;
 }
 
 .thumbnails img{
@@ -66,8 +66,13 @@ width:80px;
 height:80px;
 object-fit:cover;
 cursor:pointer;
-border:1px solid #333;
 border-radius:8px;
+border:2px solid #222;
+transition:.3s;
+}
+
+.thumbnails img:hover{
+border-color:#fff;
 }
 
 .product{
@@ -75,63 +80,96 @@ flex:1;
 min-width:300px;
 }
 
+.badge{
+display:inline-block;
+padding:8px 15px;
+border:1px solid #444;
+border-radius:30px;
+margin-bottom:20px;
+}
+
 .product h2{
 font-size:2rem;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
 .price{
-font-size:2rem;
+font-size:2.5rem;
 font-weight:bold;
 margin:20px 0;
 }
 
-.badge{
-display:inline-block;
-background:#111;
-padding:8px 15px;
-border:1px solid #333;
-border-radius:30px;
-margin-bottom:20px;
+.desc{
+color:#bbb;
+line-height:1.8;
 }
 
 select{
 width:100%;
 padding:15px;
+margin:25px 0;
 background:#111;
 color:white;
 border:1px solid #333;
-margin-bottom:20px;
-}
-
-button{
-width:100%;
-padding:18px;
-background:white;
-color:black;
-font-size:1rem;
-font-weight:bold;
-border:none;
-cursor:pointer;
 border-radius:8px;
 }
 
-button:hover{
-opacity:.9;
+.button{
+display:block;
+text-align:center;
+background:white;
+color:black;
+padding:18px;
+font-weight:bold;
+text-decoration:none;
+border-radius:8px;
+margin-top:10px;
 }
 
 .features{
-margin-top:25px;
+margin-top:30px;
 line-height:2;
 color:#ccc;
+}
+
+.details{
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
+
+.details h3{
+margin-bottom:15px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+}
+
+table td,
+table th{
+border:1px solid #333;
+padding:10px;
+text-align:center;
 }
 
 footer{
 text-align:center;
 padding:40px 20px;
-border-top:1px solid #222;
 margin-top:40px;
-color:#888;
+border-top:1px solid #222;
+color:#777;
+}
+
+@media(max-width:768px){
+.container{
+flex-direction:column;
+}
+header h1{
+font-size:2rem;
+}
 }
 </style>
 </head>
@@ -147,31 +185,29 @@ color:#888;
 
 <div class="gallery">
 
-<img id="mainImage" src="front.jpg" class="main-image">
+<img id="mainImage" src="front.png" class="main-image">
 
 <div class="thumbnails">
-<img src="front.jpg" onclick="changeImage('front.jpg')">
-<img src="back.jpg" onclick="changeImage('back.jpg')">
-<img src="detail.jpg" onclick="changeImage('detail.jpg')">
-<img src="fabric.jpg" onclick="changeImage('fabric.jpg')">
+<img src="front.png" onclick="changeImage('front.png')">
+<img src="front2.png" onclick="changeImage('front2.png')">
+<img src="back.png" onclick="changeImage('back.png')">
+<img src="logo.png" onclick="changeImage('logo.png')">
 </div>
 
 </div>
 
 <div class="product">
 
-<span class="badge">FIRST DROP</span>
+<div class="badge">FIRST DROP</div>
 
 <h2>SIDHU Originals Black Tee</h2>
 
 <div class="price">₹500</div>
 
-<p>
-Premium oversized black T-shirt featuring
-SIDHU Originals raised typography.
+<p class="desc">
+Premium oversized black T-shirt featuring bold SIDHU Originals typography.
+Built for comfort, style and everyday wear.
 </p>
-
-<br>
 
 <select>
 <option>Select Size</option>
@@ -182,19 +218,46 @@ SIDHU Originals raised typography.
 <option>XXL</option>
 </select>
 
-<a href="https://forms.gle/YOUR_FORM_LINK">
-<button>PRE-BOOK NOW</button>
+<a href="https://forms.gle/YOUR_FORM_LINK" class="button">
+PRE-BOOK NOW
 </a>
 
 <div class="features">
-✓ Premium Feel<br>
+✓ Premium Fabric<br>
 ✓ Oversized Fit<br>
-✓ Breathable Fabric<br>
-✓ Limited First Drop<br>
-✓ Pre-Booking Open
+✓ Breathable Material<br>
+✓ Lightweight Feel<br>
+✓ Limited First Drop
 </div>
 
 </div>
+
+</div>
+
+<div class="details">
+
+<h3>Product Details</h3>
+
+<p style="color:#bbb;line-height:1.8;">
+This black T-shirt is crafted from a premium viscose blend
+(51% Viscose, 44% Polyester, 5% Elastane) offering unmatched comfort and style.
+</p>
+
+<table>
+<tr>
+<th>Size</th>
+<th>Chest</th>
+<th>Length</th>
+<th>Shoulder</th>
+<th>Sleeve</th>
+</tr>
+
+<tr><td>S</td><td>40</td><td>27</td><td>19</td><td>8.5</td></tr>
+<tr><td>M</td><td>42</td><td>28</td><td>20</td><td>8.7</td></tr>
+<tr><td>L</td><td>44</td><td>29</td><td>21</td><td>9</td></tr>
+<tr><td>XL</td><td>46</td><td>30</td><td>22</td><td>9.2</td></tr>
+<tr><td>XXL</td><td>48</td><td>31</td><td>23</td><td>9.4</td></tr>
+</table>
 
 </div>
 
@@ -205,7 +268,7 @@ sidhu.shop
 
 <script>
 function changeImage(image){
-document.getElementById("mainImage").src=image;
+document.getElementById('mainImage').src=image;
 }
 </script>
 
