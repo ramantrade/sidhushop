@@ -19,8 +19,8 @@ color:#fff;
 }
 
 header{
-padding:40px 20px;
 text-align:center;
+padding:40px 20px;
 border-bottom:1px solid #222;
 }
 
@@ -45,7 +45,7 @@ gap:40px;
 
 .gallery{
 flex:1;
-min-width:300px;
+min-width:320px;
 }
 
 .main-image{
@@ -68,7 +68,7 @@ object-fit:cover;
 cursor:pointer;
 border-radius:8px;
 border:2px solid #222;
-transition:.3s;
+transition:0.3s;
 }
 
 .thumbnails img:hover{
@@ -77,7 +77,7 @@ border-color:#fff;
 
 .product{
 flex:1;
-min-width:300px;
+min-width:320px;
 }
 
 .badge{
@@ -107,23 +107,22 @@ line-height:1.8;
 select{
 width:100%;
 padding:15px;
-margin:25px 0;
 background:#111;
-color:white;
+color:#fff;
 border:1px solid #333;
 border-radius:8px;
+margin:25px 0;
 }
 
 .button{
 display:block;
 text-align:center;
-background:white;
-color:black;
+background:#fff;
+color:#000;
 padding:18px;
 font-weight:bold;
 text-decoration:none;
 border-radius:8px;
-margin-top:10px;
 }
 
 .features{
@@ -139,7 +138,7 @@ padding:20px;
 }
 
 .details h3{
-margin-bottom:15px;
+margin:20px 0;
 }
 
 table{
@@ -148,10 +147,10 @@ border-collapse:collapse;
 margin-top:15px;
 }
 
-table td,
-table th{
+table th,
+table td{
 border:1px solid #333;
-padding:10px;
+padding:12px;
 text-align:center;
 }
 
@@ -167,6 +166,7 @@ color:#777;
 .container{
 flex-direction:column;
 }
+
 header h1{
 font-size:2rem;
 }
@@ -200,22 +200,22 @@ font-size:2rem;
 
 <div class="badge">FIRST DROP</div>
 
-<h2>SIDHU Originals Black Tee</h2>
+<h2>SIDHU Originals Carved Tee</h2>
 
 <div class="price">₹500</div>
 
 <p class="desc">
-Premium oversized black T-shirt featuring bold SIDHU Originals typography.
-Built for comfort, style and everyday wear.
+Premium regular-fit black T-shirt featuring carved SIDHU Originals typography.
+Crafted from a premium viscose blend for everyday comfort, durability and style.
 </p>
 
 <select>
 <option>Select Size</option>
+<option>XS</option>
 <option>S</option>
 <option>M</option>
 <option>L</option>
 <option>XL</option>
-<option>XXL</option>
 </select>
 
 <a href="https://forms.gle/YOUR_FORM_LINK" class="button">
@@ -224,7 +224,8 @@ PRE-BOOK NOW
 
 <div class="features">
 ✓ Premium Fabric<br>
-✓ Oversized Fit<br>
+✓ Regular Fit<br>
+✓ Carved Typography<br>
 ✓ Breathable Material<br>
 ✓ Lightweight Feel<br>
 ✓ Limited First Drop
@@ -239,9 +240,12 @@ PRE-BOOK NOW
 <h3>Product Details</h3>
 
 <p style="color:#bbb;line-height:1.8;">
-This black T-shirt is crafted from a premium viscose blend
-(51% Viscose, 44% Polyester, 5% Elastane) offering unmatched comfort and style.
+This black T-shirt features carved SIDHU Originals typography on the front.
+Crafted from a premium viscose blend (51% Viscose, 44% Polyester, 5% Elastane)
+for exceptional comfort and everyday wear.
 </p>
+
+<h3>Size Chart (Inches)</h3>
 
 <table>
 <tr>
@@ -252,12 +256,17 @@ This black T-shirt is crafted from a premium viscose blend
 <th>Sleeve</th>
 </tr>
 
-<tr><td>S</td><td>40</td><td>27</td><td>19</td><td>8.5</td></tr>
-<tr><td>M</td><td>42</td><td>28</td><td>20</td><td>8.7</td></tr>
-<tr><td>L</td><td>44</td><td>29</td><td>21</td><td>9</td></tr>
-<tr><td>XL</td><td>46</td><td>30</td><td>22</td><td>9.2</td></tr>
-<tr><td>XXL</td><td>48</td><td>31</td><td>23</td><td>9.4</td></tr>
+<tr><td>XS</td><td>36</td><td>26</td><td>15.5</td><td>7</td></tr>
+<tr><td>S</td><td>38</td><td>27</td><td>16</td><td>7.5</td></tr>
+<tr><td>M</td><td>40</td><td>28</td><td>16.5</td><td>8</td></tr>
+<tr><td>L</td><td>42</td><td>29</td><td>17</td><td>8.5</td></tr>
+<tr><td>XL</td><td>44</td><td>30</td><td>17.5</td><td>9</td></tr>
+
 </table>
+
+<p style="margin-top:15px;color:#aaa;">
+Measurements are in inches.
+</p>
 
 </div>
 
@@ -268,7 +277,7 @@ sidhu.shop
 
 <script>
 function changeImage(image){
-document.getElementById('mainImage').src=image;
+document.getElementById("mainImage").src=image;
 }
 </script>
 
