@@ -1,209 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SIDHU Originals™</title>
+
+<title>SIDHU Originals</title>
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
 background:#000;
-color:white;
+color:#fff;
 }
 
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+header{
 text-align:center;
-padding:20px;
+padding:40px 20px;
+border-bottom:1px solid #222;
 }
 
-.hero h1{
-font-size:4rem;
-letter-spacing:4px;
-margin-bottom:10px;
+header h1{
+font-size:3rem;
+letter-spacing:3px;
 }
 
-.hero p{
-font-size:1.2rem;
-color:#ccc;
-margin-bottom:25px;
+header p{
+margin-top:10px;
+color:#aaa;
 }
 
-.btn{
-background:white;
-color:black;
-padding:15px 35px;
-text-decoration:none;
-font-weight:bold;
-border-radius:40px;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#ddd;
-}
-
-.section{
-padding:80px 20px;
-max-width:1000px;
+.container{
+max-width:1200px;
 margin:auto;
-text-align:center;
+padding:40px 20px;
+display:flex;
+flex-wrap:wrap;
+gap:40px;
 }
 
-.section h2{
-font-size:2.5rem;
+.gallery{
+flex:1;
+min-width:300px;
+}
+
+.main-image{
+width:100%;
+border-radius:10px;
+border:1px solid #222;
+}
+
+.thumbnails{
+display:flex;
+gap:10px;
+margin-top:15px;
+}
+
+.thumbnails img{
+width:80px;
+height:80px;
+object-fit:cover;
+cursor:pointer;
+border:1px solid #333;
+border-radius:8px;
+}
+
+.product{
+flex:1;
+min-width:300px;
+}
+
+.product h2{
+font-size:2rem;
+margin-bottom:15px;
+}
+
+.price{
+font-size:2rem;
+font-weight:bold;
+margin:20px 0;
+}
+
+.badge{
+display:inline-block;
+background:#111;
+padding:8px 15px;
+border:1px solid #333;
+border-radius:30px;
 margin-bottom:20px;
 }
 
-.section p{
-color:#bbb;
-line-height:1.8;
-}
-
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:40px;
-}
-
-.card{
-background:#111;
-padding:30px;
-border-radius:15px;
-}
-
-.card h3{
-margin-bottom:10px;
-}
-
-.card p{
-color:#999;
-}
-
-.form-section{
-background:#111;
-padding:80px 20px;
-}
-
-form{
-max-width:600px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:15px;
-}
-
-input,select{
+select{
+width:100%;
 padding:15px;
-border:none;
-border-radius:10px;
-font-size:16px;
+background:#111;
+color:white;
+border:1px solid #333;
+margin-bottom:20px;
 }
 
 button{
-padding:15px;
+width:100%;
+padding:18px;
 background:white;
 color:black;
-border:none;
-border-radius:10px;
+font-size:1rem;
 font-weight:bold;
+border:none;
 cursor:pointer;
+border-radius:8px;
+}
+
+button:hover{
+opacity:.9;
+}
+
+.features{
+margin-top:25px;
+line-height:2;
+color:#ccc;
 }
 
 footer{
 text-align:center;
-padding:30px;
-color:#777;
+padding:40px 20px;
+border-top:1px solid #222;
+margin-top:40px;
+color:#888;
 }
 </style>
 </head>
 
 <body>
 
-<section class="hero">
+<header>
 <h1>SIDHU Originals™</h1>
-<p>Inspired by a Legacy.</p>
-<a href="#prebook" class="btn">Pre-Book First Drop</a>
-</section>
+<p>Inspired by a Legacy</p>
+</header>
 
-<section class="section">
-<h2>First Drop</h2>
+<div class="container">
+
+<div class="gallery">
+
+<img id="mainImage" src="front.jpg" class="main-image">
+
+<div class="thumbnails">
+<img src="front.jpg" onclick="changeImage('front.jpg')">
+<img src="back.jpg" onclick="changeImage('back.jpg')">
+<img src="detail.jpg" onclick="changeImage('detail.jpg')">
+<img src="fabric.jpg" onclick="changeImage('fabric.jpg')">
+</div>
+
+</div>
+
+<div class="product">
+
+<span class="badge">FIRST DROP</span>
+
+<h2>SIDHU Originals Black Tee</h2>
+
+<div class="price">₹500</div>
+
 <p>
-Premium Punjabi Streetwear.
-Limited Founder Edition.
-Built for those who carry their roots with pride.
+Premium oversized black T-shirt featuring
+SIDHU Originals raised typography.
 </p>
 
-<div class="products">
+<br>
 
-<div class="card">
-<h3>Classic Tee</h3>
-<p>Founder Edition</p>
-</div>
-
-<div class="card">
-<h3>Signature Hoodie</h3>
-<p>Coming Soon</p>
-</div>
-
-<div class="card">
-<h3>Premium Cap</h3>
-<p>Limited Release</p>
-</div>
-
-</div>
-</section>
-
-<section id="prebook" class="form-section">
-
-<h2 style="text-align:center;margin-bottom:30px;">
-Pre-Book Now
-</h2>
-
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-
-<input type="text" name="name" placeholder="Full Name" required>
-
-<input type="email" name="email" placeholder="Email Address" required>
-
-<input type="tel" name="phone" placeholder="Phone Number" required>
-
-<select name="product">
-<option>Classic Tee</option>
-<option>Signature Hoodie</option>
-<option>Premium Cap</option>
-</select>
-
-<select name="size">
+<select>
+<option>Select Size</option>
 <option>S</option>
 <option>M</option>
 <option>L</option>
 <option>XL</option>
+<option>XXL</option>
 </select>
 
-<button type="submit">
-Join First Drop
-</button>
+<a href="https://forms.gle/YOUR_FORM_LINK">
+<button>PRE-BOOK NOW</button>
+</a>
 
-</form>
+<div class="features">
+✓ Premium Feel<br>
+✓ Oversized Fit<br>
+✓ Breathable Fabric<br>
+✓ Limited First Drop<br>
+✓ Pre-Booking Open
+</div>
 
-</section>
+</div>
+
+</div>
 
 <footer>
-© 2026 SIDHU Originals™ | sidhu.shop
+© 2026 SIDHU Originals™<br>
+sidhu.shop
 </footer>
+
+<script>
+function changeImage(image){
+document.getElementById("mainImage").src=image;
+}
+</script>
 
 </body>
 </html>
